@@ -1,0 +1,274 @@
+::selection {
+    background-color: rgb(12, 12, 12);
+    color:rgb(240, 233, 233) 
+}
+
+html {
+    cursor: none;
+}
+
+a:hover {
+    cursor: none;
+  }
+
+.cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid black;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 9999;
+  }
+
+  .cursor2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: black;
+    opacity: .5;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 9998;
+  }
+
+  .cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+    
+  }
+
+  .hover {
+    background-color: #fcc36f;
+    transition: transform .12s;
+    opacity: 0.5;
+    pointer-events: none;
+
+  }
+
+
+  
+  /*.card:hover .image .hover {
+    background-color: #fcc36f;
+    pointer-events: auto;
+
+  }*/
+  
+
+
+/* Funziona SOLO su Firefox */
+* {
+    scrollbar-width: none;
+    /* scrollbar-width: auto;*/
+    /* scrollbar-gutter: stable both-edges;*/
+     /*scrollbar-color: #283618 #ebe3b4;;*/
+    
+  }
+  
+  /* Funziona su Chrome, Edge, e Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #283618;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #FEFAE0;
+    border-radius: 30px;
+    border: 4px solid #283618;
+  }
+
+body{
+  margin:0px;
+  background-color:#FEFAE0;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #283618;
+    padding: 2%;
+}
+
+header div.logo {
+    display: flex;
+    align-items: center;
+}
+
+header div.logo a{
+    color: #FEFAE0;
+    font-family: 'Poppins';
+    font-weight: 700;
+    margin: 0 0 0 16px;
+    font-size: 25px;
+    display: flex;
+}
+
+header div.logo a:hover{
+    color:#85D32C;
+}
+
+header a {
+    font-family: 'Poppins';
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FEFAE0;
+}
+
+header a:hover {
+    font-family: 'Poppins';
+    text-decoration: none;
+    color:#85D32C;
+}
+
+header ul {
+    margin: 0%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    display: inline-block;
+    padding: 0 40px 0 0;  /* prima cifra top seconda cifra right terza bottom quarta top */
+}
+
+section.titolo {
+  padding: 2%;
+  font-size: 115px;
+  font-family: 'Poppins';
+  font-weight: 700;
+  color: #283618;
+  line-height: 155%;
+  letter-spacing: -9px;
+  opacity: 0;
+  animation: text-in 1.2s ease-in-out forwards;
+}
+
+@keyframes text-in {
+  from {
+    opacity: 0;
+    transform: translateX(-70%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.grid, .card {
+  max-width: 1200px;
+  margin: auto; /* centro l'elemento nella pagina */
+  padding: 10px;
+  
+}
+
+.grid {
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  gap: 100px;
+  
+
+}
+
+.grid{
+ color:#283618;
+ font-weight: 500;
+}
+
+.grid h2 {
+  padding: 0%;
+  margin: 5% 0 0 0;
+  font-size: 40px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  line-height: 155%;
+  letter-spacing: -1px;
+  text-align: center;
+
+}
+
+.grid :hover {
+  color:#85D32C;
+}
+
+.card {
+transition: transform 0.23s ease-in-out;
+transform-origin: center;
+position: relative;
+
+}
+
+.card:hover {
+transform: scale(1.05);
+
+}
+
+.card img {
+position: relative;
+
+}
+
+
+
+main {
+  /*background-color: rgb(226, 4, 4);*/
+  margin: 0 0 80px 0;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: #283618;
+  padding: 1.5%;
+}
+
+footer div.Copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer-container{
+  width: 100%;
+}
+
+footer a, footer h3 {
+  font-family: 'Poppins';
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 16px;
+  color: #FEFAE0;
+}
+
+footer a:hover {
+  font-family: 'Poppins';
+  text-decoration: none;
+  color:#85D32C;
+}
+
+footer ul {
+  margin: 0%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 40px 0 0;
+}
+
